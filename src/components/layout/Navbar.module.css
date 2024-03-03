@@ -1,0 +1,31 @@
+.navbar {
+  display: flex;
+  padding: 1em;
+  background-color: #222;
+  justify-content: space-between;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.item {
+  margin-right: 2em;
+}
+
+.item a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.item a:hover {
+  color: #ffbb33;
+}
+
+.logo svg {
+  margin-right: 20em;
+  font-size: 2em;
+  color: #ffbb33;
+}
