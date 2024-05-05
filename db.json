@@ -32,6 +32,28 @@
       },
       "cost": 0,
       "service": []
+    },
+    {
+      "id": "0324",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "budget": "5000",
+      "name": "costs",
+      "cost": 0,
+      "service": []
+    },
+    {
+      "id": "6829",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "budget": "5000",
+      "name": "costs",
+      "cost": 0,
+      "service": []
     }
   ],
   "categories": [
