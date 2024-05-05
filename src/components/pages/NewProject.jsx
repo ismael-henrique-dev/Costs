@@ -25,7 +25,8 @@ function NewProject() {
       // eslint-disable-next-line react-hooks/rules-of-hooks
       const navigate = useNavigate();
 
-      navigate("/projects", { message: "Projeto criado com sucesso!" });
+     
+      navigate('/projects', { state: { message: 'Projeto criado com sucesso!' } })
     })
     .catch(err => console.log(err))
   }
