@@ -12,6 +12,7 @@ function Project() {
 
   const [projects, setProjects] = useState([])
   const [showProjectForm, setShowProjectForm] = useState(false)
+  const [showServiceForm, setShowServiceForm] = useState(false)
 
   useEffect(() => {
     fetch(`http://localhost:5000/projects/${id}`, {
@@ -26,8 +27,7 @@ function Project() {
   }, [id])
 
   function editPost(projects) {
-    console.log(projects)
-
+  
     fetch(`http://localhost:5000/projects/${projects.id}`, {
       method: "PATCH",
       headers: {
@@ -43,7 +43,13 @@ function Project() {
   function toggleProjectForm() {
     setShowProjectForm(!showProjectForm)
   }
+
+  function toggleServiceForm() {
+    setShowServiceForm(!showServiceForm)
+  }
+
   console.log(projects.category)
+
   return (
     <div className={styles.project_datails}>
       <Container customClass="column">
@@ -69,6 +75,19 @@ function Project() {
               <ProjectForm handleSubmit={editPost} btnText="Concluir edição" projectData={projects}/>
             </div>
           )}
+        </div>
+        <div className={styles.service_form_container}>
+          <h2>Adicione um serviço: </h2>
+          <button onClick={toggleServiceForm} className={styles.btn}>
+            {!showProjectForm ? "Adicionar serviço" : "Fechar"}
+          </button>
+          <div className={styles.project_info}>
+            {showServiceForm && <div>fsdfdfed</div>}
+          </div>
+          <h2>Serviços: </h2>
+          <Container>
+            <p>serviço</p>
+          </Container>
         </div>
       </Container>
     </div>
