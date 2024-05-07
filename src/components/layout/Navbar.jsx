@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom"
 import styles from "./Navbar.module.css"
 import Container from "./Container"
-import { FaCoins } from "react-icons/fa";
+import logo from "../imgs/costs_logo.png"
+
 function Navbar() {
   return (
     <nav className={styles.navbar}>
       <Container>
         <ul className={styles.list}>
-          <li className={styles.item}><Link className={styles.logo} to="/"><FaCoins /></Link></li>
+          <li className={styles.item}><Link className={styles.logo} to="/"><img src={logo} alt="logo" /></Link></li>
           <li className={styles.item}><Link to="/">Home</Link></li>
           <li className={styles.item}><Link to="/newproject">Novo Projeto</Link></li>
           <li className={styles.item}><Link to="/projects">Projetos</Link></li>
