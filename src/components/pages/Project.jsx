@@ -1,9 +1,12 @@
 import styles from "./Project.module.css"
 import Container from '../layout/Container'
 import ProjectForm from "../project/ProjectForm"
+import ServiceForm from "../service/serviceForm"
 
 import { useParams } from "react-router-dom"
 import { useState, useEffect } from "react"
+import { parse, v4 as uuidv4 } from "uuid"
+
 
 function Project() {
 
@@ -38,6 +41,35 @@ function Project() {
       setProjects(data)
       setShowProjectForm(!projects)
     }).catch(err => console.log(err))
+  }
+
+  function createService(projects) {
+
+    const lastService = projects.service[projects.service.length - 1]
+    lastService.id = uuidv4()
+
+    const lastServiceCost = lastService.cost
+
+    const newCost = parseFloat(projects.cost) + parseFloat(lastServiceCost)
+
+    if (newCost > parseFloat(projects.budget)) {
+      console.log("Orçamento ultrapassado, verifique o valor do serviço")
+      projects.service.pop()
+      return false
+    }
+
+    projects.cost = newCost
+
+    fetch(`http://localhost:5000/projects/${projects.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type" : "application/json",
+      }, body : JSON.stringify(projects)
+    }).then(res => res.json())
+    .then((data) => {
+      console.log(data)
+    }).catch(err => console.log(err))
+
   }
 
   function toggleProjectForm() {
@@ -79,14 +111,18 @@ function Project() {
         <div className={styles.service_form_container}>
           <h2>Adicione um serviço: </h2>
           <button onClick={toggleServiceForm} className={styles.btn}>
-            {!showProjectForm ? "Adicionar serviço" : "Fechar"}
+            {!showServiceForm ? "Adicionar serviço" : "Fechar"}
           </button>
           <div className={styles.project_info}>
-            {showServiceForm && <div>fsdfdfed</div>}
+            {showServiceForm && (
+             <ServiceForm handleSubmit={createService}
+              btnText="Adicionar serviço" 
+              projectData={projects} />
+            )}
           </div>
           <h2>Serviços: </h2>
           <Container>
-            <p>serviço</p>
+            <p>serviços</p>
           </Container>
         </div>
       </Container>

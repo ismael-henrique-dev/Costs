@@ -8,8 +8,15 @@
         "id": "2",
         "name": "Desenvolvimento"
       },
-      "cost": 0,
-      "service": []
+      "cost": 234,
+      "service": [
+        {
+          "cost": "234",
+          "name": "costs",
+          "description": "asasasas",
+          "id": "f6824726-0390-491e-ab26-c969671e4a6c"
+        }
+      ]
     },
     {
       "id": "f862",
