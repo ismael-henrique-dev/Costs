@@ -1,31 +1,41 @@
 {
   "projects": [
     {
-      "id": "71bf",
-      "name": "Projeto 1",
-      "budget": "4000",
+      "id": "380a",
+      "name": "contratar dev backend",
+      "budget": "12343",
       "category": {
         "id": "2",
         "name": "Desenvolvimento"
       },
-      "cost": 2323,
-      "service": [
-        {
-          "name": "serviço1",
-          "cost": "2323",
-          "description": "teste",
-          "id": "c693b9aa-1de2-48dd-aaac-04514dfdd39f"
-        }
-      ]
+      "cost": 0,
+      "service": []
     },
     {
-      "id": "f862",
-      "name": "Projeto Atualizado",
-      "budget": "589034343343",
+      "id": "5eba",
+      "name": "contratar dev backend",
       "category": {
         "id": "3",
         "name": "Design"
       },
+      "cost": 0,
+      "service": []
+    },
+    {
+      "id": "4491",
+      "name": "meu novo serviço",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "budget": "3434",
+      "cost": 0,
+      "service": []
+    },
+    {
+      "id": "87c8",
+      "name": "Projeto Atualizado",
+      "budget": "343",
       "cost": 0,
       "service": []
     }

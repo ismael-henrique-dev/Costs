@@ -106,7 +106,7 @@ function Project() {
     setShowServiceForm(!showServiceForm)
   }
 
-  console.log(projects.category)
+  console.log(projects.category ? projects.category.name : 'No category')
 
   return (
     <div className={styles.project_datails}>
@@ -119,7 +119,7 @@ function Project() {
           {!showProjectForm ? (
             <div className={styles.project_info}>
               <p>
-                <span>Categoria: </span> {projects.name}
+                <span>Categoria: </span> {projects.category ? projects.category.name : 'No category'}
               </p>
               <p>
                 <span>Orçamento: </span> R$ {projects.budget}
