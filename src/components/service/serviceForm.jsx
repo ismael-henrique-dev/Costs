@@ -25,7 +25,7 @@ function serviceForm({handleSubmit, btnText, projectData}) {
       type="text"
       text="Nome do serviço"
       name="name"
-      placeholder="Insira o nome do projeto"
+      placeholder="Insira o nome do serviço"
       handleOnChange={handleChange}
     />
     <Input 

@@ -6,14 +6,15 @@ import ServiceForm from "../service/serviceForm"
 import { useParams } from "react-router-dom"
 import { useState, useEffect } from "react"
 import { parse, v4 as uuidv4 } from "uuid"
+import ServiceCard from "../service/ServiceCard"
 
 
 function Project() {
 
   const { id } = useParams()
-  console.log(id)
-
+  
   const [projects, setProjects] = useState([])
+  const [services, setServices] = useState([])
   const [showProjectForm, setShowProjectForm] = useState(false)
   const [showServiceForm, setShowServiceForm] = useState(false)
 
@@ -26,6 +27,7 @@ function Project() {
     }).then(res => res.json())
     .then((data) => {
       setProjects(data)
+      setServices(data.service)
     }).catch(err => console.log(err))
   }, [id])
 
@@ -44,6 +46,7 @@ function Project() {
   }
 
   function createService(projects) {
+    setShowServiceForm(!showServiceForm)
 
     const lastService = projects.service[projects.service.length - 1]
     lastService.id = uuidv4()
@@ -68,6 +71,29 @@ function Project() {
     }).then(res => res.json())
     .then((data) => {
       console.log(data)
+    }).catch(err => console.log(err))
+
+  }
+
+  function removeService(id, cost) {
+
+    const servicesUpdated = projects.service.filter((service) => service.id !== id)
+
+    const projectUpdated = projects
+
+    projectUpdated.service = servicesUpdated
+
+    projectUpdated.cost = parseFloat(projectUpdated.cost) - parseFloat(cost)
+
+    fetch(`http://localhost:5000/projects/${projectUpdated.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type" : "application/json",
+      }, body : JSON.stringify(projectUpdated),
+    }).then(res => res.json())
+    .then((data) => {
+      setProjects(projectUpdated)
+      setServices(servicesUpdated)
     }).catch(err => console.log(err))
 
   }
@@ -122,7 +148,19 @@ function Project() {
           </div>
           <h2>Serviços: </h2>
           <Container>
-            <p>serviços</p>
+            {services.length > 0 && 
+              services.map((service) => (
+                <ServiceCard 
+                  id={service.id}
+                  name={service.name}
+                  cost={service.cost}
+                  description={service.description}
+                  key={service.id}
+                  handleRemove={removeService}
+                />
+              ))
+            }
+            {services.length === 0 && <p>Não há serviços</p>}
           </Container>
         </div>
       </Container>

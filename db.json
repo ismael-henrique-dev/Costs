@@ -8,13 +8,13 @@
         "id": "2",
         "name": "Desenvolvimento"
       },
-      "cost": 234,
+      "cost": 2323,
       "service": [
         {
-          "cost": "234",
-          "name": "costs",
-          "description": "asasasas",
-          "id": "f6824726-0390-491e-ab26-c969671e4a6c"
+          "name": "serviço1",
+          "cost": "2323",
+          "description": "teste",
+          "id": "c693b9aa-1de2-48dd-aaac-04514dfdd39f"
         }
       ]
     },
