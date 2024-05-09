@@ -16,10 +16,10 @@
 
 ## 📸 Screenshots
 <div align="center" justify-content="space-around">
-  <img height="250" src="src/components/imgs/home.png" />
-  <img height="250" src="src/components/imgs/newproject.png" />
-  <img height="250" src="src/components/imgs/projects.png" />
-  <img height="250" src="src/components/imgs/services.png" />
+  <img height="240" src="src/components/imgs/home.png" />
+  <img height="240" src="src/components/imgs/newproject.png" />
+  <img height="240" src="src/components/imgs/projects.png" />
+  <img height="240" src="src/components/imgs/services.png" />
 </div>
 
 ## 🎥 Preview
