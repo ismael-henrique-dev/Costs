@@ -72,7 +72,6 @@ Inicie o servidor
 - Persistência de dados
 - Adicionar/Remover/Alterar projetos
 - Adicionar/Remover/Alterar serviços
-- Exibição de notificações referentes as ações realizadas
 
 ## 🎓 Aprendizado
 
