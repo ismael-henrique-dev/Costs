@@ -25,7 +25,7 @@
 ## 🎥 Preview
 
 <p align="center">
-  <img height="430" src="src/assets/gif-previw.gif" />
+  <img height="430" src="src/components/imgs/gif.gif" />
 </p>
 
 ## 🚀 Rodando localmente
