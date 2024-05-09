@@ -1,5 +1,5 @@
 <p align="center">
-  <img align="center" height="300" src="src/assets/Grocery Store.png"  />
+  <img align="center" height="300" src="src/components/imgs/Costs.png"  />
 </p>
 
 ## <p align="center">Costs</p>
