@@ -26,11 +26,29 @@
         "id": "3",
         "name": "Design"
       },
+      "cost": 4342,
+      "service": [
+        {
+          "name": "serviço1",
+          "cost": "4342",
+          "description": "teste",
+          "id": "71e9a204-f85a-43f3-94b7-aed657bb9f56"
+        }
+      ]
+    },
+    {
+      "id": "cc2d",
       "cost": 0,
       "service": []
     },
     {
-      "id": "cc2d",
+      "id": "0092",
+      "name": "Projeto Atualizado",
+      "budget": "34563",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
       "cost": 0,
       "service": []
     }
