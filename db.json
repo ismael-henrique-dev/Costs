@@ -1,19 +1,27 @@
 {
   "projects": [
     {
-      "id": "380a",
-      "name": "contratar dev backend",
-      "budget": "12343",
+      "id": "9a59",
+      "name": "Sorveteria",
+      "budget": "5000",
       "category": {
         "id": "2",
         "name": "Desenvolvimento"
       },
-      "cost": 0,
-      "service": []
+      "cost": 2000,
+      "service": [
+        {
+          "name": "contratar dev backend",
+          "cost": "2000",
+          "description": "fazer um crud",
+          "id": "de8c2e33-f611-49e7-9286-5e43df185f69"
+        }
+      ]
     },
     {
-      "id": "5eba",
-      "name": "contratar dev backend",
+      "id": "6db8",
+      "name": "Mercearia ",
+      "budget": "4500",
       "category": {
         "id": "3",
         "name": "Design"
@@ -22,20 +30,17 @@
       "service": []
     },
     {
-      "id": "4491",
-      "name": "meu novo serviço",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "budget": "3434",
+      "id": "9fab",
       "cost": 0,
       "service": []
     },
     {
-      "id": "87c8",
-      "name": "Projeto Atualizado",
-      "budget": "343",
+      "id": "2f11",
+      "cost": 0,
+      "service": []
+    },
+    {
+      "id": "c268",
       "cost": 0,
       "service": []
     }

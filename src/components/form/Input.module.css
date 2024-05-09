@@ -13,6 +13,7 @@
   border-radius: 0;
   padding: .7em;
   border: none;
+  background-color: #ddd;
 }
 
 .form_control input::placeholder {
