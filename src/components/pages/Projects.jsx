@@ -54,10 +54,10 @@ function Projects() {
         {projects.length > 0 &&
         projects.map((project) => (
           <ProjectCard 
-          name={project.name}
+          name={project.name ? project.name : 'Projeto sem nome'}
           id={project.id}
-          budget={project.budget}
-          category={project.category ? project.category.name : 'No category'}
+          budget={project.budget ? project.budget : 'Projeto sem orçamento'}
+          category={project.category ? project.category.name : 'Nenhum'}
           key={project.id}
           handleRemove={removeProject} />
         ))
