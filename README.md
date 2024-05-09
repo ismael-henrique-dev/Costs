@@ -15,11 +15,12 @@
 
 
 ## 📸 Screenshots
-<p align="center">
-  <img height="350" src="src/assets/home.png" />
-  <img height="350" src="src/assets/filter.png" />
-  <img height="430" src="src/assets/emptycart.png" />
-</p>
+<div align="center" justify-content="space-around">
+  <img height="280" src="src/components/imgs/home.png" />
+  <img height="280" src="src/components/imgs/newproject.png" />
+  <img height="280" src="src/components/imgs/projects.png" />
+  <img height="280" src="src/components/imgs/services.png" />
+</div>
 
 ## 🎥 Preview
 
