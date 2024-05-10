@@ -5,7 +5,7 @@ import styles from "./NewProject.module.css"
 
 function NewProject() {
 
-  // const history = useHistory()
+  const navigate = useNavigate()
 
   function createPost(project) {
     //inicializando o custo e os serviços
@@ -21,14 +21,10 @@ function NewProject() {
     }).then((resp) => resp.json())
     .then((data) => {
       console.log(data)
-      //redirect
-      // eslint-disable-next-line react-hooks/rules-of-hooks
-      const navigate = useNavigate();
-
-     
-      navigate('/projects', { state: { message: 'Projeto criado com sucesso!' } })
+      navigate("/projects")
     })
     .catch(err => console.log(err))
+
   }
 
   return (
