@@ -62,6 +62,7 @@ function Projects() {
           handleRemove={removeProject} />
         ))
         }
+        {projects.length === 0 && <span>Não há projetos</span>}
       </Container>
     </div>
   )

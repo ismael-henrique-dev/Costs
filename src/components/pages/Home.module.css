@@ -27,3 +27,13 @@
   width: 600px;
   margin: 2em 0;
 }
+
+@media (max-width: 768px) {
+  .home_container img {
+   width: 300px;
+  }
+
+  .home_container {
+    text-align: center  ;
+  }
+}

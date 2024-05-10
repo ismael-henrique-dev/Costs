@@ -46,3 +46,9 @@
 .project_info {
   width: 100%;
 }
+
+@media (max-width: 768px) {
+  .btn {
+    margin-bottom: 20px;
+  }
+}

@@ -21,7 +21,7 @@ function App() {
       {/*Conteúdo que irá mudar*/}
       <Container customClass="min-height">
         <Routes>
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/company" element={<Company />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/newproject" element={<NewProject />} />

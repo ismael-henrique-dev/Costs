@@ -5,6 +5,20 @@
   justify-content: space-between;
 }
 
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.menuHamburguer {
+  display: none;
+  color: #fff;
+  font-size: 32px;
+  cursor: pointer;
+}
+
 .list {
   display: flex;
   align-items: center;
@@ -28,4 +42,36 @@
   margin-right: 20em;
   font-size: 2em;
   color: #ffbb33;
+}
+
+@media (max-width: 768px) {
+  .list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 56px; 
+    left: 0;
+    background-color: #222;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .list.showMenu {
+    display: flex;
+  }
+
+  .menuHamburguer {
+    display: block;
+  }
+
+  .navbar {
+    height: 60px;
+  }
+
+  .logo  img {
+    margin-top: 0.3em;
+    width: 45px;
+  }
 }
