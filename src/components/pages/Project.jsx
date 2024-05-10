@@ -56,7 +56,7 @@ function Project() {
     const newCost = parseFloat(projects.cost) + parseFloat(lastServiceCost)
 
     if (newCost > parseFloat(projects.budget)) {
-      console.log("Orçamento ultrapassado, verifique o valor do serviço")
+      alert("Orçamento ultrapassado, verifique o valor do serviço.")
       projects.service.pop()
       return false
     }
@@ -105,8 +105,6 @@ function Project() {
   function toggleServiceForm() {
     setShowServiceForm(!showServiceForm)
   }
-
-  console.log(projects.category ? projects.category.name : 'No category')
 
   return (
     <div className={styles.project_datails}>
