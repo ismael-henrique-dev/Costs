@@ -48,16 +48,10 @@ Instale as dependências
   npm install
 ```
 
-Inicie a aplicação
+Inicie a aplicação e o servidor JSON
 
 ```bash
   npm run dev
-```
-
-Inicie o servidor
-
-```bash
-  npm run backend
 ```
 
 ## 💻 Tecnologias Utilizadas
